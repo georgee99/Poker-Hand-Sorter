@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.util.Arrays;
-import java.util.Scanner;
-import java.io.File;  // Import the File class
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -212,7 +211,7 @@ public class PokerMain {
 			return high;
 		}
 		
-		private String calculateWinningHand(Hand player1Hand, Hand player2Hand) {
+		private void calculateWinningHand(Hand player1Hand, Hand player2Hand) {
 
 			int player1Rank = player1Hand.getRank();
 			int player2Rank = player2Hand.getRank();
@@ -225,12 +224,11 @@ public class PokerMain {
 				int player1HighCard = player1Hand.highestCard();
 				int player2HighCard = player2Hand.highestCard();
 				if (player1HighCard == player2HighCard) {
-//					System.out.println("Tie");
+//					Leave this for now
 					player1WinCount++;
 //					player2WinCount++;
 				}
 			}
-			return "";
 		}
 	}
 }
